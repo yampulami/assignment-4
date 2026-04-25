@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Finder</title>
+    <link rel="stylesheet" href="./dog-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form id="dog-form">
+      <h1>Dog Finder</h1>
+      <div class="field-group">
+        <label for="breed">Type any dog breed:</label>
+        <input
+          list="breeds"
+          name="breed"
+          id="breed"
+          placeholder="Try 'african', 'boston bulldog'..."
+        />
+        <datalist id="breeds"></datalist>
+      </div>
+      <button id="show-images" type="submit">Find My Dog</button>
+    </form>
+
+    <main id="image-container">
+      <p id="img-placeholder">Search for a breed above</p>
+      <p id="img-err-text" class="hide">No such breed</p>
+      <img id="dog-img" class="hide" alt="Dog breed result" />
+    </main>
+
+    <p id="img-time-log" class="footer hide">
+      Image changing in <span id="img-change-seconds">5 seconds</span>
+    </p>
+
+    <script src="./dog-script.js"></script>
+  </body>
+</html>
